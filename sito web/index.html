@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito mio</title>
+</head>
+
+
+<button onclick="saluta()">Cliccami</button>
+
+<script>
+  function saluta() {
+    alert("ciao");
+  }
+</script>
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<a href="https://www.Juventus.com">
+  <button>Cliccami</button>
+</a>
+
+<button type="button" class="btn btn-link">Link</button>
+<body>
+    <h1>Juventus</h1>
+
+<head
+</style>
+
+
+ <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FFEB3B; /* giallo */
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Modulo di contatto</h2>
+
+  <form id="mioForm">
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="email" id="email" placeholder="Email">
+    <button type="submit">Invia</button>
+  </form>
+
+  <p id="messaggio"></p>
+
+  <script>
+    // Prendiamo il form
+    const form = document.getElementById("mioForm");
+
+    form.addEventListener("submit", function (evento) {
+      evento.preventDefault(); // blocca l'invio automatico
+
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const messaggio = document.getElementById("messaggio");
+
+      // Controlli
+      if (nome === "" || email === "") {
+        messaggio.textContent = "Compila tutti i campi!";
+        messaggio.className = "errore";
+        return;
+      }
+
+      if (!email.includes("@")) {
+        messaggio.textContent = "Inserisci un'email valida!";
+        messaggio.className = "errore";
+        return;
+      }
+
+      // Se tutto va bene
+      messaggio.textContent = "Modulo inviato con successo ✅";
+      messaggio.className = "successo";
+
+      // Reset del form
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
+``
+
+</html>
